@@ -3,7 +3,7 @@ import { Pet } from "../types";
 import { getAllPets, searchPets } from "../services/pets";
 import { DEFAULT_PAGE_LIMIT } from "../utils";
 
-export function usePets(limit = 10) {
+export function usePets(limit = DEFAULT_PAGE_LIMIT) {
   const [pets, setPets] = useState<Pet[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
